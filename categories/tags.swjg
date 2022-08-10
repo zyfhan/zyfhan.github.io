@@ -1,0 +1,11 @@
+<%-
+	site['myTags'] = []
+	site.tags.forEach(function (item) {
+	  site['myTags'].push(item.name)
+	})
+%>
+<%- site.myTags.forEach(function(tag){ %>
+    <li class="article-tag-list-item">
+        <i class="iconfont icon-tag"></i><a><%-tag%></a>
+    </li>
+<%- }) %>

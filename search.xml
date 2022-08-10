@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>更新git代码到本地</title>
+    <url>/download-git/</url>
+    <content><![CDATA[<p>git代码更新到本地</p>
+<a id="more"></a>
+<h5 id="先查看仓库的地址"><a href="#先查看仓库的地址" class="headerlink" title="先查看仓库的地址"></a>先查看仓库的地址</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<h5 id="更新代码"><a href="#更新代码" class="headerlink" title="更新代码"></a>更新代码</h5><ul>
+<li><p>从远程的origin仓库的master分支下载代码到本地的origin master</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch origin master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>比较本地的仓库和远程参考的区别</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span> -p master.. origin/master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把远程下载下来的代码合并到本地仓库，远程的和本地的合并</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git merge origin/master</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="网上第二种办法，仅作收录，未曾使用"><a href="#网上第二种办法，仅作收录，未曾使用" class="headerlink" title="网上第二种办法，仅作收录，未曾使用"></a>网上第二种办法，仅作收录，未曾使用</h5><ul>
+<li>从远程的origin仓库的master分支下载到本地并新建一个分支temp<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch origin master:temp</span><br></pre></td></tr></table></figure></li>
+<li>比较master分支和temp分支的不同<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git diff temp</span><br></pre></td></tr></table></figure></li>
+<li>合并temp分支到master分支<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git merge temp</span><br></pre></td></tr></table></figure></li>
+<li>删除temp<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -d temp</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo的常用命令行</title>
+    <url>/hexo-line/</url>
+    <content><![CDATA[<p>Hexo的一下常用的命令</p>
+<a id="more"></a>
+<h4 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章名称&quot;</span></span><br></pre></td></tr></table></figure>
+<p>创建后出现的目录：socure/_posts/<br>文件名为：文章名称.md</p>
+<h4 id="清除缓存文件"><a href="#清除缓存文件" class="headerlink" title="清除缓存文件"></a>清除缓存文件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>清除缓存文件 db.json 和已生成的静态文件 public</p>
+<ul>
+<li>当网站出现异常或者某些配置没有生效时可使用</li>
+<li>使用后需要重新生成静态文件</li>
+</ul>
+<h4 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>生成网站静态文件到默认设置的 public 文件夹</p>
+<ul>
+<li>查看网站生成的静态文件或者手动部署网站</li>
+</ul>
+<h4 id="本地预览文章"><a href="#本地预览文章" class="headerlink" title="本地预览文章"></a>本地预览文章</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br><span class="line">// 或者 两者效果一致</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>启动本地服务器，用于预览主题。默认地址： <a href="http://localhost:4000/">http://localhost:4000/</a></p>
+<ul>
+<li>预览的同时可以修改文章内容或主题代码，保存后刷新页面即可；</li>
+</ul>
+<h4 id="更换端口"><a href="#更换端口" class="headerlink" title="更换端口"></a>更换端口</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s -p 4001</span><br></pre></td></tr></table></figure>
+<p>启动本地服务器的同时修改访问端口。默认地址： <a href="http://localhost:4001/">http://localhost:4001/</a></p>
+<h4 id="更新仓库代码"><a href="#更新仓库代码" class="headerlink" title="更新仓库代码"></a>更新仓库代码</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br><span class="line">// 或者 两者效果一致</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>并部署到设定的仓库。</p>
+<h4 id="自定义域名时更新仓库代码"><a href="#自定义域名时更新仓库代码" class="headerlink" title="自定义域名时更新仓库代码"></a>自定义域名时更新仓库代码</h4><p>首先需要在项目根目录的source文件夹下面添加一个文件 CNAME</p>
+<ul>
+<li>文件名必须是 CNAME 全部大写，没有后缀</li>
+<li>文件内容为自定义的域名，不包含www，以及http </li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>line</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo的多端代码同步</title>
+    <url>/hexo-deposit/</url>
+    <content><![CDATA[<p>hexo的多端源文件同步方法！</p>
+<a id="more"></a>
+<p>在本地调试好代码，并生成的静态页面已经更新服务器或者github等地方之后，源文件如果需要做到多端同步，那就需要把源文件也托管了！<br>本文使用github的仓库。在github中新建一个仓库。用来存放Hexo生成的网站原始的文件。<br>PS：如果不想使用仓库也可以在博客仓库创建分支存放，一个存放源文件，一个存放静态文件。</p>
+<h5 id="1、创建仓库或者分支"><a href="#1、创建仓库或者分支" class="headerlink" title="1、创建仓库或者分支"></a>1、创建仓库或者分支</h5><p>请按照你的想法创建存放位置</p>
+<h5 id="2、源文件上传github"><a href="#2、源文件上传github" class="headerlink" title="2、源文件上传github"></a>2、源文件上传github</h5><p>2.1、在本地创建好需要存放文件夹<br>运行以下代码克隆仓库，记得修改仓库的名字</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone git@github.com:zyfhan&#x2F;zyfhan.github.io.git</span><br></pre></td></tr></table></figure>
+
+<p>2.2、打开<code>zyfhan.githun.io</code>文件夹，删除<code>.git</code>以外所有的文件</p>
+<p>2.3、把hexo源文件全部复制过来，<code>.deploy_git</code>除外</p>
+<p>源文件有个特殊文件<code>.gitignore</code>，该文件用来避开不需要上传的文件，如果没有的话，可以自己建一个，内容如下，可以自行修改</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.<span class="built_in">log</span></span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
+
+<p>另外一个主题文件theme里如果存在<code>.git</code>文件，也需要删除，git不允许嵌套上传，否则主题文件会上传过滤</p>
+<p>2.4、开始上传</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit –m <span class="string">&quot;master&quot;</span></span><br><span class="line">git push </span><br></pre></td></tr></table></figure>
+<p>然后运行这个代码，自动生成CNAME文件，并部署到设定的仓库。</p>
+<h5 id="3、另外一台电脑下载源文件"><a href="#3、另外一台电脑下载源文件" class="headerlink" title="3、另外一台电脑下载源文件"></a>3、另外一台电脑下载源文件</h5><p>3.1、在需要存放文件夹<br>运行以下代码克隆仓库，记得修改仓库的名字</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone git@github.com:zyfhan&#x2F;zyfhan.github.io.git</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>同2.1步骤</p>
+</blockquote>
+<p>3.2、然后进入文件夹下载依赖包</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd zyfhan.github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>3.3、然后可以正常使用了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>
