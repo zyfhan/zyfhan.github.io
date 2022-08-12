@@ -6,7 +6,7 @@
   <link href="http://fhan.top/atom.xml" rel="self"/>
   
   <link href="http://fhan.top/"/>
-  <updated>2022-08-10T03:39:14.759Z</updated>
+  <updated>2022-08-11T08:10:22.000Z</updated>
   <id>http://fhan.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PayPal支付 准备</title>
+    <link href="http://fhan.top/paypal-1/"/>
+    <id>http://fhan.top/paypal-1/</id>
+    <published>2022-08-11T07:39:57.000Z</published>
+    <updated>2022-08-11T08:10:22.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;准备阶段，创建PayPal支付的生产环境、沙箱环境&lt;/p&gt;
+&lt;p&gt; 登录 &lt;a href=&quot;https://developer.paypal.com/developer&quot; title=&quot;PayPal官方网站&quot;&gt;PayPal官方网站&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="http://fhan.top/categories/Hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://fhan.top/tags/hexo/"/>
+    
+    <category term="line" scheme="http://fhan.top/tags/line/"/>
+    
+  </entry>
   
   <entry>
     <title>更新git代码到本地</title>

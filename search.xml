@@ -111,4 +111,55 @@
         <tag>hexo</tag>
       </tags>
   </entry>
+  <entry>
+    <title>PayPal支付 准备</title>
+    <url>/paypal-1/</url>
+    <content><![CDATA[<p>准备阶段，创建PayPal支付的生产环境、沙箱环境</p>
+<p> 登录 <a href="https://developer.paypal.com/developer" title="PayPal官方网站">PayPal官方网站</a></p>
+<a id="more"></a>
+
+<h2 id="创建应用，配置应用"><a href="#创建应用，配置应用" class="headerlink" title="创建应用，配置应用"></a>创建应用，配置应用</h2><img src="http://qn.fhan.top/paypal/fhan_84375570a426eaf8ccb0556e403baf5d.jpeg" alt="PayPal" title="PayPal" style="">
+
+<p>左侧栏 “My Apps &amp; Credentials”，“Live” 为生存环境，“Sandbox”为沙箱环境，两环境配置过程一样</p>
+<blockquote>
+<p>一开始需要邮箱验证</p>
+</blockquote>
+<img src="http://qn.fhan.top/paypal/fhan_82a6baa6d99b62721049200b10f817b5.jpeg" alt="PayPal" title="PayPal" style="">
+
+<img src="http://qn.fhan.top/paypal/fhan_459f462a440882d5932cde487e4c4df6.jpeg" alt="PayPal" title="PayPal" style="">
+
+<p>创建好之后，点击应用名称进入详情，获取“Client Id”和“Client Secret”参数</p>
+<img src="http://qn.fhan.top/paypal/fhan_47f73c333a76a0d34b5c24119d455218.jpeg" alt="PayPal" title="PayPal" style="">
+
+<p>创建应用的WEBHOOKS，并且配置信息</p>
+<img src="http://qn.fhan.top/paypal/fhan_358e4e786ca9a1a751b97660cf8cbc25.jpeg" alt="PayPal" title="PayPal" style="">
+
+<img src="http://qn.fhan.top/paypal/fhan_abe25079ff54c81b1c05e4912c7be848.jpeg" alt="PayPal" title="PayPal" style="">
+
+<h2 id="2、准备沙箱环境"><a href="#2、准备沙箱环境" class="headerlink" title="2、准备沙箱环境"></a>2、准备沙箱环境</h2><p>根据第一步步骤再次创建 “Sandbox” 沙箱环境的应用</p>
+<p>下面开始创建沙箱的用户账号</p>
+<img src="http://qn.fhan.top/paypal/fhan_5b88ad0dd7588b218e23f50745e871e7.jpeg" alt="PayPal" title="PayPal" style="">
+
+<p>开始创建账号</p>
+<blockquote>
+<p>用户类型建议选择 “Business” </p>
+</blockquote>
+<img src="http://qn.fhan.top/paypal/fhan_cdf47b0d1fc015f640b75e18dad01d99.jpeg" alt="paypal" title="paypal" style="">
+
+<p>创建好账号之后，开始获取信息</p>
+<img src="http://qn.fhan.top/paypal/fhan_7c6ba9bc6f0c70be9189db7b4c687454.jpeg" alt="PayPal" title="PayPal" style="">
+
+<img src="http://qn.fhan.top/paypal/fhan_afdd42688252f4bbeded1f09f1d3b5bc.jpeg" alt="PayPal" title="PayPal" style="">
+
+<img src="http://qn.fhan.top/paypal/fhan_46d1cdd7a31ce9f610861cd3c4e9fa6f.jpeg" alt="PayPal" title="PayPal" style="">
+
+<h2 id="准备阶段完成"><a href="#准备阶段完成" class="headerlink" title="准备阶段完成"></a>准备阶段完成</h2>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>line</tag>
+      </tags>
+  </entry>
 </search>
